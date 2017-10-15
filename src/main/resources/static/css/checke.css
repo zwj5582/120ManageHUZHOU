@@ -1,0 +1,21 @@
+body{font-size:12px;font-family:'ËÎÌו,Arial, Helvetica'}
+a{color:#047;text-decoration:none}
+a:hover{color:#a40000;text-decoration:none}
+input,select{margin:2px 2px 2px 2px; height:25px; line-height:20px;vertical-align:middle;}
+ 
+
+textarea{margin:2px 2px 2px 2px;line-height:20px; padding:1px;width:500px;height:70px;font-size:12px;}
+.rimse select{border:1px solid #35aef9;padding:1px;width:100px;}
+.rimty input{height:26px;width:70px;vertical-align:middle;widows:70px;}
+checkbox,iterator{margin:2px 2px 2px 2px; height:8px;width:8px;vertical-align:middle;}
+
+table td span{color:#a40000}
+input.rightformcss,select.rightformcss,textarea.rightformcss{border:1px solid green;padding:1px;}
+.failmsg{color:#a40000;}
+.msgvaluecss{font-style:italic;}
+input.failformcss,select.failformcss,textarea.failformcss{border:1px solid #a40000;padding:1px;}
+
+
+.simpleContent{width:530px;white-space:nowrap;word-break:keep-all;overflow:hidden;text-overflow:ellipsis;text-align:center; }
+
+.spanmi{color:#a40000;size:3px;padding-left:0px;margin:0px}

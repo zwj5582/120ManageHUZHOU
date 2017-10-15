@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.dropmenu.js"></script>
+<link href="css/jquery.dropmenu.css" type="text/css" rel="stylesheet" />
+<title>下拉菜单</title>
+<script>
+String.prototype.render=function(dta) {
+    var format = {
+        name: function(x) {
+            return x
+        }
+    };
+    return this.replace(/{(\w+)}/g, function(m1, m2) {
+        if (!m2)
+            return "";
+        return (format && format[m2]) ? format[m2](dta[m2]) : dta[m2];
+    });
+}
+
+var menu = [
+{
+	name: '系统管理',
+	url: '#',
+	target: 'I2',
+	menus: [
+	{
+		name: ' 账号管理',
+		url: '#',
+		target: 'I2',
+		menus: []
+	},
+	{
+		name: ' 账号管理2',
+		url: '#',
+		target: 'I2',
+		menus: []
+	},
+	{
+		name: ' 角色管理',
+		url: '#',
+		target: 'I2',
+		menus: [
+		{
+			name: ' 内部角色',
+			url: '#',
+			target: 'I2',
+			menus: []
+		},
+		{
+			name: ' 医院角色',
+			url: '#',
+			target: 'I2',
+			menus: []
+		},
+		{
+			name: ' 护士角色',
+			url: '#',
+			target: 'I2',
+			menus: []
+		},
+		{
+			name: ' 系统角色',
+			url: '#',
+			target: 'I2',
+			menus: []
+		}]
+	},
+	{
+		name: ' 菜单管理',
+		url: '#',
+		target: 'I2',
+		menus: []
+	},
+	{
+		name: ' 系统管理',
+		url: '#',
+		target: 'I2',
+		menus: []
+	}]
+},
+{
+	name: '人事管理',
+	url: '#',
+	target: 'I2',
+	menus: [
+		{
+			name: ' 人员管理',
+			url: '#',
+			target: 'I2',
+			menus: []
+		},
+		{
+			name: ' 工资管理',
+			url: '#',
+			target: 'I2',
+			menus: []
+		},
+		{
+			name: ' 合同管理',
+			url: '#',
+			target: 'I2',
+			menus: []
+		},
+
+		{
+			name: ' 考勤管理',
+			url: '#',
+			target: 'I2',
+			menus: [
+			{
+				name: ' 普通员工考勤',
+				url: '#',
+				target: 'I2',
+				menus: []
+			},
+			{
+				name: ' 领导考勤',
+				url: '#',
+				target: 'I2',
+				menus: []
+			}]
+		},
+		{
+			name: ' 请假管理',
+			url: '#',
+			target: 'I2',
+			menus: []
+		},
+		{
+			name: ' 加班管理',
+			url: '#',
+			target: 'I2',
+			menus: []
+		}
+	]
+}];
+//var min=false;
+var menuTd=null;
+$(function(){
+ menuTd=$("#menu").parent();
+ //createMenu();
+ //$(".li-a").click(click1);
+ $("#menu").dropMenu({menu:menu,width:240,shrinkBtn:'min-toggle-btn',onShrink:onShrink});
+});
+
+function onShrink(min){
+	if(!min){
+		menuTd.width(28);
+	}else{
+		menuTd.width(240);
+	}
+}
+/*
+function shtoggle(){
+	if(!min){
+		min=true;
+		menuTd.width(28);
+		$(".li-a").unbind("click");
+		$(".rm  li").mouseenter(mousein).mouseleave(mouseout);
+	}else{
+		min=false;
+		menuTd.width(240);
+		$(".rm   li").unbind("mouseenter").unbind("mouseleave");
+		$(".li-a").click(click1);
+	}
+	$("#menu").children("ul").toggleClass("menu-min");
+}
+
+function click1(){
+		var childUL=$(this).parent().children("ul");
+		 var iel=$(this).children("i");
+		 if(childUL){
+			 if(!childUL.is(":visible")){
+			 childUL.show();
+			 iel.addClass("dropicon-on");  
+			 }else{
+				click2(childUL,iel) ;
+			}
+		 }
+	 
+}
+function click2(childUL,iel){
+			 if(childUL){
+			   childUL.parent().find("ul").hide();
+			  childUL.parent().find("i").removeClass("dropicon-on");
+		 }
+}
+
+function mousein(e){
+	var _this=$(this);
+   var cul=_this.children("ul");
+   if(cul&&cul.length>0){
+	   cul.show();
+	   cul.addClass("hover-on");
+	   var position=_this.position();
+	   var left=position.left+_this.outerWidth()-1;
+	   var top=position.top;
+	   cul.css({top:top,left:left});
+	   _this.addClass('li-hover');
+ 	}
+	  e.stopPropagation();
+}
+
+function mouseout(e){
+	var _this=$(this);
+	var cul=_this.children("ul");
+   if(cul&&cul.length>0){
+ 	   cul.removeClass("hover-on");
+	   cul.css({display:'none'});
+	  _this.removeClass('li-hover');
+ 	}
+}
+*/
+</script>
+</head>
+<body>
+ 
+ 
+
+  <table id="rootTab" cellspacing="1" border="0" >
+    <tr>
+     <td colspan="2" style="height:60px;">
+       <div id="header">
+         <div id="logo"></div>
+         <div id="min-toggle-btn">
+            <a >
+               折叠
+            </a>
+         </div>
+       </div>
+     </td>
+    </tr>
+    <tr>
+     <td valign="top" align="left" style="width:240px;  background:#3356E3;" >
+       <div id="menu">
+        
+       </div>
+     </td>
+      <td>
+       <div id="out"></div>
+      </td>
+    </tr>
+  </table>
+  
+</body>
+</html>

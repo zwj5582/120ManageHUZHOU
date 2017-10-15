@@ -1,0 +1,25 @@
+.multiSelect{ border: 1px solid #b8def5;max-height: 255px;
+position:absolute; overflow: hidden;background:white;border-radius: 2px 2px 2px 2px;}
+.multiSelect .items{ max-height:230px; overflow: auto;overflow-x:hidden;}
+.multiSelect .item{ cursor:pointer; font-size:13px; padding-left:3px; height:25px; line-height:25px;  width:100%;overflow:hidden;}
+.multiSelect .item span{vertical-align:middle; margin-left:3px;}
+.multiSelect .item:hover{ background: #CCC;}
+.multiSelect .light{ background: #CCC;}
+.multiSelect .toolbar { border-top:solid #b8def5 1px;padding-left:3px; line-height:18px; }
+.multiSelect .toolbar #all1{ float:left;font-size:12px;vertical-align: middle;}
+.multiSelect .toolbar input[type='button']{ float:right; width:36px; height:18px;   border: outset #CCC 1px; text-align:center; margin-right:3px;}
+.multinput{float:left; border:none; background:#FFF;}
+.multinputDiv{ float:left;display:compact; overflow:hidden; margin: 0px; padding: 0px;  margin-left:2px;  } 
+.multinputDiv input{float:left; border:none; background:none; border-width: 0px;}
+
+.multinputDiv .active{ float:right; width:14px;height:100%;background-image:url(dropdown.gif);border-left: 1px solid  #b8def5;  background-position:center center; background-repeat:no-repeat;}
+
+.multinputDiv .active:hover{ background-color:#b8def5; background-image:url(dropdown_hover.gif); background-position:center center; background-repeat:no-repeat; cursor:pointer;}
+
+.required{color:#a40000; float:left; width:14px;height:100%;  background-repeat:no-repeat;}
+
+
+.multinputDiv .block{width:16px;height:100%; display:inline-block;background-image:url(add.png); background-position: center bottom; background-repeat:no-repeat;cursor:pointer;}
+
+.multinputDiv  textarea{word-wrap:break-word; word-break:break-all; }
+

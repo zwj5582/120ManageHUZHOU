@@ -1,0 +1,81 @@
+spring:
+  jpa:
+    hibernate.naming.physical-strategy: com.meliora.common.CustomsPhysicalNamingStrategyStandardImpl
+    properties.hibernate.format_sql: true
+    show-sql: true
+  aop:
+    proxy-target-class: false #当需要使用CGLIB代理和@AspectJ自动代理支持则设置为true
+    auto: true #默认增加了 @EnableAspectJAutoProxy注解
+  mvc:
+    static-path-pattern: /** #这个是默认配置，提供的静态资源映射
+    #throw-exception-if-no-handler-found: true #如果handler无法处理请求，直接抛出NoHandlerFoundException，默认为false
+    view:
+      prefix: /WEB-INF/jsp/ #设定mvc视图的前缀
+      suffix: .jsp #设定mvc视图的后缀
+    async.request-timeout:  #设定同步请求的超时时间，以毫秒为单位，如果没有设置的话，以具体实现的超时时间
+    date-format: yyyy-MM-dd HH:mm:ss #设定日期的格式
+    dispatch-trace-request: false
+    dispatch-options-request: false
+    favicon.enabled: true #是否支持favicon.ico，默认为: true
+    ignore-default-model-on-redirect: true #在重定向时是否忽略默认model的内容，默认为true
+    message-codes-resolver-format: postfix_error_code
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/ #这个是默认配置
+    add-mappings: true #是否开启默认的资源处理，默认为true
+    cache-period:  #设定资源的缓存时效，以秒为单位.
+    chain:
+      cache: true #是否开启缓存，默认为: true
+      enabled: true #是否开启资源 handling chain，默认为false
+      html-application-cache: false #是否开启h5应用的cache manifest重写，默认为: false
+      strategy:
+        content.enabled: false #是否开启内容版本策略，默认为false
+        content.paths: /**  #指定要应用的版本的路径，多个以逗号分隔，默认为:[/**]
+        fixed.enabled: false #是否开启固定的版本策略，默认为false
+  http:
+    multipart:
+      enabled: true #是否开启文件上传支持，默认为true
+      file-size-threshold: #设定文件写入磁盘的阈值，单位为MB或KB，默认为0
+      max-request-size: 100Mb #请求最大size
+      max-file-size: 100Mb #文件最大size
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+server:
+  address: 127.0.0.1
+  port: 9999
+  session:
+    timeout: 1800
+  context-path: /120ManageHUZHOU
+
+db:
+  ip: 127.0.0.1
+  port: 3306
+  name: huzhou
+  username: root
+  password: 123456
+
+as:
+  ip: 192.168.1.16
+  port: 8090
+  ssh_port: 60022
+  username: root
+  password: meliora
+
+sync.db:
+  ip: 192.168.1.223
+  name: BHJD_VIEW
+  port: 1433
+  username: sa
+  password: 123456
+
+sms.url: http://121.40.90.136:7070/SMS/
+
+report.url: http://192.168.1.16:60087/120Manage/emergencyImp!impEmergencyList.action
+
+report.detailUrl: http://192.168.1.16:60087/120Manage/emergencyImp!impEmergencyInfo.action
+
+sendSms.url: http://121.40.60.37:60081/PHECS-GDZS/specialRiskAssessment_login.html
+
+querysql.enable: true

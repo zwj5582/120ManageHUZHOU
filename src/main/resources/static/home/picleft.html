@@ -1,0 +1,89 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>120急救管理系统</title>
+    <style type="text/css">
+        <!--
+        body {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            background-color: #ffffff;
+        }
+
+        .a1:link {
+            color: #003399;
+            text-decoration: none;
+        }
+
+        .a1:visited {
+            color: #FF0000
+        }
+
+        .a1:hover {
+            color: #CC0000;
+            text-decoration: underline;
+        }
+
+        .imgh {
+            border: 2px solid #ddd;
+
+            background: #fff;
+        }
+
+        -->
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/ven.css">
+
+</head>
+
+<body>
+<table width="160" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td width="160">
+            <DIV id=demo style="BACKGROUND: #ffffff; OVERFLOW: hidden; WIDTH: 160px; COLOR: #0000ff; HEIGHT: 280px">
+                <DIV id=demo1>
+                    <div align="center">
+                        <table border="0" align="center" cellspacing="0">
+                            <tr>
+                                <td align="center" height="125">11111<br></td>
+                            </tr>
+                            <tr>
+                                <td align="center" height="125">1111<br></td>
+                            </tr>
+                            <tr>
+                                <td align="center" height="125">1111<br></td>
+                            </tr>
+                            <tr>
+                                <td align="center" height="125">111<br></td>
+                            </tr>
+                        </table>
+                    </div>
+                </DIV>
+                <DIV id=demo2></DIV>
+            </DIV>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+<SCRIPT language="javascript">
+    var speed = 50;
+    demo2.innerHTML = demo1.innerHTML;
+    function Marquee() {
+        if (demo2.offsetTop - demo.scrollTop <= 0) {
+            demo.scrollTop -= demo1.offsetHeight;
+        }
+        else {
+            demo.scrollTop++;
+        }
+    }
+    var MyMar = setInterval(Marquee, speed);
+    demo.onmouseover = function () {
+        clearInterval(MyMar)
+    };
+    demo.onmouseout = function () {
+        MyMar = setInterval(Marquee, speed)
+    };
+</SCRIPT>

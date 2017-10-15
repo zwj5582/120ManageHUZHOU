@@ -1,0 +1,89 @@
+﻿/* calendar style */
+
+#calendarDiv {
+	display: block;
+	display: none;
+	position: relative;
+	border: 1px solid #888;
+}
+#calendarDiv * {
+	font-family: arial;
+}
+#calendarDiv a {
+	cursor: pointer;
+}
+#calendarTable {
+	background: #ddd;
+	clear: both;
+	text-align: center;
+	font-size: 12px;
+}
+#calendarTable, #linksTable {
+	width: 180px;
+}
+#calendarTable .calendarHeader {
+	background: #63a0d3;
+	border-bottom: 1px solid #666;
+}
+#calendarTable .calendarHeader select {
+	font-size: 11px;
+	width: 65px;
+}
+#calendarTable .weekDaysTitleRow {
+	background: #666;
+	color: #fff;
+}
+#calendarTable .weekDaysRow {
+	background: #eee;
+	color: #666;
+}
+#calendarTable .weekDaysCell {
+	color: #000;
+	border: 1px solid #ddd;
+	width: 14%;
+}
+#calendarTable .weekDaysCellOver {
+	background: #fff;
+	border: 1px solid #777;
+}
+#linksTable {
+	background: #63a0d3;
+}
+#linksTable * {
+	font-family: arial;
+}
+#linksTable a {
+	display: block;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 11px;
+	padding: 2px 4px;
+}
+#linksTable a:hover {
+	background: #ddd;
+	color: #333;
+}
+#prevMonth {
+	float: left;
+}
+#nextMonth {
+	float: right;
+}
+#today {
+	background: #999;
+}
+#selectedday {
+	background: #8EC032;
+}
+#calendar_cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -1px; /*must have*/
+    left: -1px; /*must have*/
+    width: 185px; /*must have to match width and borders*/
+    height: 160px; /*must have to match maximum height*/ 
+}

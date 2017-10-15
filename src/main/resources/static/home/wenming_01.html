@@ -1,0 +1,285 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>120急救管理系统</title>
+    <style type="text/css">
+        <!--
+        body {
+            margin-left: 0px;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            background-color: #ffffff;
+        }
+
+        .a1:link {
+            color: #003399;
+            text-decoration: none;
+        }
+
+        .a1:visited {
+            color: #FF0000
+        }
+
+        .a1:hover {
+            color: #CC0000;
+            text-decoration: underline;
+        }
+
+        .imgh {
+            border: 2px solid #ddd;
+
+            background: #fff;
+        }
+
+        -->
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/ven.css">
+    <script language="JavaScript" src="js/swfobject.js" type="text/javascript"></script>
+    <script language="JavaScript" type="text/javascript">
+        function huiyi() {
+            document.getElementById("huiyi").style.display = "block";
+            document.getElementById("caigou").style.display = "none";
+            document.getElementById('tdhuiyi').style.background = 'url(images/picp1_23.png)';
+            document.getElementById('tdcaigou').style.background = 'url(images/picp1_22.png)';
+            document.getElementById('tdhuiyi').className = '';
+            document.getElementById('tdcaigou').className = 'font12w';
+        }
+        function caigou() {
+            document.getElementById("huiyi").style.display = "none";
+            document.getElementById("caigou").style.display = "block";
+            document.getElementById('tdhuiyi').style.background = 'url(images/picp_23.png)';
+            document.getElementById('tdcaigou').style.background = 'url(images/picp_22.png)';
+            document.getElementById('tdhuiyi').className = 'font12w';
+            document.getElementById('tdcaigou').className = '';
+        }
+    </script>
+</head>
+
+<body>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td width="1000" height="200" valign="bottom" background="images/pic_01.png">
+            <table width="99%" border="0" cellspacing="0">
+                <tr>
+                    <td></td>
+                    <td align="right" height="157">
+                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="863" height="141">
+                            <param name="movie" value="swf/21.swf">
+                            <param name="quality" value="high">
+                            <param name="wmode" value="transparent">
+                            <embed src="swf/21.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="863" height="141" wmode="transparent"></embed>
+                        </object>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td align="right">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="2%">&nbsp;</td>
+                    <td width="98%" align="left" style="color:#FFF">今天是：
+                        <script language="JavaScript" type="text/JavaScript">
+                            var day = "";
+                            var month = "";
+                            var ampm = "";
+                            var ampmhour = "";
+                            var myweekday = "";
+                            var year = "";
+                            mydate = new Date();
+                            myweekday = mydate.getDay();
+                            mymonth = mydate.getMonth() + 1;
+                            myday = mydate.getDate();
+                            myyear = mydate.getYear();
+                            year = (myyear > 200) ? myyear : 1900 + myyear;
+                            if (myweekday == 0)
+                                weekday = " 星期日 ";
+                            else if (myweekday == 1)
+                                weekday = " 星期一 ";
+                            else if (myweekday == 2)
+                                weekday = " 星期二 ";
+                            else if (myweekday == 3)
+                                weekday = " 星期三 ";
+                            else if (myweekday == 4)
+                                weekday = " 星期四 ";
+                            else if (myweekday == 5)
+                                weekday = " 星期五 ";
+                            else if (myweekday == 6)
+                                weekday = " 星期六 ";
+                            document.write(year + "年" + mymonth + "月" + myday + "日 " + weekday);
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="5"></td>
+                    <td></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table width="97%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="10%"><a href="index.html"><img src="images/pic_02.png" width="96" height="34" border="0" onMouseOver="this.src='images/pic0_02.png'" onMouseOut="this.src='images/pic_02.png'"></a></td>
+                    <td width="49%"><a href="#"><img src="images/pic_03.png" width="97" height="34" border="0" onMouseOver="this.src='images/pic0_03.png'" onMouseOut="this.src='images/pic_03.png'"></a></td>
+                    <td width="5%"><a href="#"><img src="images/pic_04.png" width="97" height="34" border="0" onMouseOver="this.src='images/pic0_04.png'" onMouseOut="this.src='images/pic_04.png'"></a></td>
+                    <td width="5%"><a href="#"><img src="images/pic_05.png" width="97" height="34" border="0" onMouseOver="this.src='images/pic0_05.png'" onMouseOut="this.src='images/pic_05.png'"></a></td>
+                    <td width="5%"><a href="#"><img src="images/pic_06.png" width="97" height="34" border="0" onMouseOver="this.src='images/pic0_06.png'" onMouseOut="this.src='images/pic_06.png'"></a></td>
+                    <td width="5%"><a href="#"><img src="images/pic_07.png" width="97" height="34" border="0" onMouseOver="this.src='images/pic0_07.png'" onMouseOut="this.src='images/pic_07.png'"></a></td>
+                    <td width="5%"><a href="../login!input.action"><img src="images/pic_08.png" width="97" height="34" border="0" onMouseOver="this.src='images/pic0_08.png'" onMouseOut="this.src='images/pic_08.png'"></a></td>
+                    <td width="5%"><a href="#"><img src="images/pic_09.png" width="97" height="34" border="0" onMouseOver="this.src='images/pic0_09.png'" onMouseOut="this.src='images/pic_09.png'"></a></td>
+                    <td width="5%"><a href="#"><img src="images/pic_10.png" width="95" height="34" border="0" onMouseOver="this.src='images/pic0_10.png'" onMouseOut="this.src='images/pic_10.png'"></a></td>
+                    <td width="6%"><a href="wenming_01.html"><img src="images/pic_11.png" width="130" height="34" border="0" onMouseOver="this.src='images/pic0_11.png'" onMouseOut="this.src='images/pic_11.png'"></a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td background="images/pic_newbg.png">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td height="8"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td width="20%" height="704" valign="top">
+                        <table width="22%" border="0" cellspacing="0" cellpadding="0">
+
+                            <tr>
+                                <td><img src="images/picti_13.png" width="195" height="34" alt=""/></td>
+                            </tr>
+                            <tr>
+                                <td background="images/picti_17.png" align="center">
+                                    <DIV id=demo style="BACKGROUND: #ffffff; OVERFLOW: hidden; WIDTH: 160px; COLOR: #0000ff; HEIGHT: 280px">
+                                        <DIV id=demo1>
+                                            <div align="center">
+                                                <table border="0" align="center" cellspacing="0">
+                                                    <tr>
+                                                        <td align="center" height="125"><br></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" height="125"><br></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" height="125"><br></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" height="125"><br></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </DIV>
+                                        <DIV id=demo2></DIV>
+                                    </DIV>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/picti_22.png" width="195" height="6" alt=""/></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/picti0_23.png" alt="" width="195" height="39" border="0"/></td>
+                            </tr>
+                            <tr>
+                                <td><a href="zhengwu_01.html"><img src="images/picti_25.png" width="195" height="53" border="0" onMouseOver="this.src='images/picti0_25.png'" onMouseOut="this.src='images/picti_25.png'"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="dangwu_01.html"><img src="images/picti_27.png" width="195" height="55" border="0" onMouseOver="this.src='images/picti0_27.png'" onMouseOut="this.src='images/picti_27.png'"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="../schedule!printScheduleAccount.action"><img src="images/picti_28.png" width="195" height="54" border="0" onMouseOver="this.src='images/picti0_28.png'" onMouseOut="this.src='images/picti_28.png'"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#"><img src="images/picti_29.png" width="195" height="52" border="0" onMouseOver="this.src='images/picti0_29.png'" onMouseOut="this.src='images/picti_29.png'"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#"><img src="images/picti_32.png" width="195" height="53" border="0" onMouseOver="this.src='images/picti0_32.png'" onMouseOut="this.src='images/picti_32.png'"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#"><img src="images/picti_36.png" width="195" height="52" border="0" onMouseOver="this.src='images/picti0_36.png'" onMouseOut="this.src='images/picti_36.png'"></a></td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/picti_38.png" alt="" width="195" height="13" border="0"/></td>
+                            </tr>
+                            <tr>
+                                <td height="13">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="80%" valign="top">
+                        <table width="805" border="0" cellspacing="0" cellpadding="0">
+
+
+                            <tr>
+                                <td height="19">
+                                    <iframe id="iFrame1" name="iFrame1" width="100%" onload="this.height=iFrame1.document.body.scrollHeight" frameborder="0" src="wenming_01new.html"></iframe>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td background="images/pic_54.png" height="121px">
+            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="middle">
+                        <table width="58%" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td width="15%" align="center">网站简介</td>
+                                <td width="1%" align="center">|</td>
+                                <td width="16%" align="center">网站地图</td>
+                                <td width="1%" align="center">|</td>
+                                <td width="16%" align="center">使用帮助</td>
+                                <td width="1%" align="center">|</td>
+                                <td width="16%" align="center">网站声明</td>
+                                <td width="0%" align="center">|</td>
+                                <td width="16%" align="center">意见反馈</td>
+                                <td width="1%" align="center">|</td>
+                                <td width="17%" align="center">联系我们</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="26" align="center">Copyright 120急救管理系统 版权所有</td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<map name="Map4">
+    <area shape="rect" coords="291,11,340,32" href="#">
+</map>
+</body>
+</html>
+<SCRIPT language="javascript">
+    var speed = 50;
+    demo2.innerHTML = demo1.innerHTML;
+    function Marquee() {
+        if (demo2.offsetTop - demo.scrollTop <= 0) {
+            demo.scrollTop -= demo1.offsetHeight;
+        }
+        else {
+            demo.scrollTop++;
+        }
+    }
+    var MyMar = setInterval(Marquee, speed);
+    demo.onmouseover = function () {
+        clearInterval(MyMar)
+    };
+    demo.onmouseout = function () {
+        MyMar = setInterval(Marquee, speed)
+    };
+</SCRIPT>

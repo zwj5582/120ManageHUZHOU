@@ -1,0 +1,48 @@
+
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>120急救管理系统</title>
+<link rel="stylesheet" type="text/css" href="home/css/ven.css">
+<link href="home/css/public.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body {
+	margin-left: 2px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+</head>
+
+<body>
+<script>
+imgUrl1="images/p1.jpg";
+imgtext1=" "
+imgLink1=escape("#");
+imgUrl2="images/p2.jpg";
+imgtext2="外高桥造船创行业纪录"
+imgLink2=escape("#");
+imgUrl3="images/p1.jpg";
+imgtext3=""
+imgLink3=escape("#");
+imgUrl4="images/p2.jpg";
+imgtext4="绿色施工"
+imgLink4=escape("#");
+var focus_width=250
+var focus_height=180
+var text_height=18
+var swf_height = focus_height + text_height
+var pics=imgUrl1 + "|" + imgUrl2 + "|" + imgUrl3 + "|" + imgUrl4
+var links=imgLink1 + "|" + imgLink2 + "|" + imgLink3 + "|" + imgLink4
+var texts=imgtext1 + "|" + imgtext2 + "|" + imgtext3 + "|" + imgtext4
+document.write('<object tabindex="-1" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="swf/focus.swf"><param name="quality" value="high"><param name="bgcolor" value="#ffffff">');
+document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+document.write('<embed tabindex="-1" src="swf/focus.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#000000" quality="high" width="'+ focus_width +'" height="'+ 218 +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer";</object>');</script>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+.droplist{
+	position: relative;
+	z-index: 100;
+}
+
+.droplist > div {
+	display: none;
+    height: auto;
+    position: relative;
+    text-align: left;
+    top: -1px;
+    z-index: 10;
+}
+
+.droplist > .drop-link{
+	display: block;
+	margin: auto;
+    position: relative;
+    z-index: 100;
+    text-align:center;
+}
+
+.droplist > listcontent{
+	display: none;
+}

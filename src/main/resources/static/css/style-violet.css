@@ -1,0 +1,114 @@
+#header {
+	background: #1f262d;
+}
+
+.m-drop>.m-child {
+	background: #4a1a7a none repeat scroll 0 0;
+	filter:alpha(opacity=90); 
+    -moz-opacity:0.9; 
+    opacity:0.9;
+	border: 1px solid #4a1a7a;
+}
+.m-drop>.m-child>.item {
+	border: solid 1px #4a1a7a;
+}
+
+.hover-drop-link {
+	background: #4a1a7a;
+		filter:alpha(opacity=90); 
+    -moz-opacity:0.9; 
+    opacity:0.9;
+}
+
+#min-toggle-btn:hover {
+	background-color: #4a1a7a;
+    filter:alpha(opacity=90); 
+    -moz-opacity:0.9; 
+    opacity:0.9;
+}
+
+#menu a {
+	color: #b2bbc7;
+}
+.menu-min .li-a {
+	background: #0251a0;
+}
+.li-a:hover {
+	background: #cc66ff;
+	color: #fff ! important;
+}
+.lighbg{ background: #cc66ff ! important; font-weight: 600 ! important; }
+.li-a > span:hover{
+	color: #fff ! important;
+}
+
+
+.li-a {
+	border-bottom: solid 1px #434e59;
+}
+
+.menu-min .li-a {
+	height: 28px;
+	background: #2e363f;
+}
+
+.rm li:first-child {
+	border-top: solid 1px #434e59;
+}
+
+
+.hover-on>li {
+	border-left: solid 1px #434e59;
+	border-right: solid 1px #434e59;
+}
+
+.rm li:first-child {
+    border-top: 1px solid #434e59;
+}
+ 
+.menu-min .li-hover {
+    border-right: 1px solid #434e59;
+}
+
+.menu-min .li-a:hover:hover {
+	background: #cc66ff ! important;
+	color: #fff ! important;
+}
+
+.hover-on>li:first-child {
+	border-left: solid 1px #434e59;
+}
+
+.dropicon {
+	background-image: url(../js/jquery.dropmenu/img/layout_arrows_violet.png);
+}
+
+
+
+.lefttd{background: #2e363f  ! important  ;
+}
+
+
+#content_form .title{
+	background:#5f3588! important; 
+
+}
+
+.warning{
+	color:#002b99;
+}
+
+#current_position span{
+	color:#9900cc! important;
+}
+
+
+/** ·­Ò³Í¼±êÑùÊ½**/
+.page span{ color:#663399! important;
+}
+.pagebtn{
+    background:#663399! important; 	
+}
+.pagebtn:hover{ background:#8f14cc! important;
+                            color:#fff! important;
+}

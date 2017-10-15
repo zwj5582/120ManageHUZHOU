@@ -1,0 +1,78 @@
+* {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+IMG {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none
+}
+UL LI {
+	LIST-STYLE-TYPE: none
+}
+OL LI {
+	LIST-STYLE-TYPE: none
+}
+A:link {
+	COLOR: #000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #3d3d3d; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #f00; TEXT-DECORATION: underline
+}
+IMG {
+	
+}
+H1 {
+	FONT-SIZE: 12px
+}
+H2 {
+	FONT-SIZE: 12px
+}
+H3 {
+	FONT-SIZE: 12px
+}
+H4 {
+	FONT-SIZE: 12px
+}
+H5 {
+	FONT-SIZE: 12px
+}
+H6 {
+	FONT-SIZE: 12px
+}
+BODY {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: 18px; BACKGROUND-COLOR: #fff; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #000; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+#skip {
+	WIDTH: 0px; HEIGHT: 0px; OVERFLOW: hidden
+}
+DIV.lanmutiaozhuan {
+	WIDTH: 0px; HEIGHT: 0px; OVERFLOW: hidden
+}
+#container {
+	POSITION: relative; TEXT-ALIGN: left; MARGIN: 0px auto; WIDTH: 780px
+}
+.clearboth {
+	LINE-HEIGHT: 0px; CLEAR: both; FONT-SIZE: 0px
+}
+DIV#mainpage P {
+	PADDING-BOTTOM: 8px; LINE-HEIGHT: 18px; PADDING-TOP: 8px
+}
+DIV#mainpage {
+	TEXT-ALIGN: left
+}
+#error {
+	Z-INDEX: 1000; POSITION: absolute; TOP: 100px; LEFT: 50%
+}
+#error A {
+	BACKGROUND-IMAGE: url(/images/alert.jpg); POSITION: relative; PADDING-LEFT: 60px; WIDTH: 142px; DISPLAY: block; BACKGROUND-REPEAT: no-repeat; HEIGHT: 119px; COLOR: #000; MARGIN-LEFT: -122px; FONT-SIZE: 12px; TEXT-DECORATION: none; PADDING-TOP: 65px
+}
+#img_zxft {
+	MARGIN-TOP: 1px
+}
+#img_fwpt {
+	MARGIN-TOP: -1px
+}
+#img_bspt {
+	MARGIN-TOP: -1px
+}

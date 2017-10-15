@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script>
+var expresion="";
+$(function(){
+	$("#del").click(function(){
+		var pos=$('textarea').position();
+		var length=expresion.length;
+		if(length>0){
+			 
+			length=expresion.lastIndexOf(" ",pos);
+			if(length>0){
+		 
+			 	var p=getTempExpresion(expresion,pos);
+				if(p!=null){
+				//	alert(expresion.substring(0,p.s)+"   "+expresion.substring(p.e,expresion.length));
+					expresion=expresion.substring(0,p.s)+expresion.substring(p.e,expresion.length);
+				 }else{
+					 return;
+			     }
+			 	$('textarea').text(expresion);
+			 	$('textarea').position(p.s);
+			 $('textarea').focus();
+			}
+			
+		}
+		
+		
+	});
+	
+	function regReplace(str){
+		var reg = /\s{2,}/g;
+	    return str.replace(reg," ")+" ";
+	}
+	
+	function getTempExpresion(str,pos){
+		var c=0;
+		var temp=str.substring(0,pos);
+ 		var last=0;
+		// alert(temp);
+		if(pos>0){
+			 c=str.charCodeAt(pos);
+		    if(c!=32||c>127){
+			   var subs=str.substring(pos-1,str.length);
+				last=subs.indexOf(" ");
+				temp=str.substring(0,pos+last);
+			}
+		}
+		// alert(temp);
+		if(temp.length>0){
+			var s=temp.lastIndexOf(" ");
+			if(temp.charCodeAt(temp.length-1)==32){
+				temp=temp.substring(0,temp.length-1);
+				s=temp.lastIndexOf(" ");
+			}
+		//	alert(temp);
+		 	return {s:s,e:temp.length}
+		}
+		return null;
+		
+	}
+	
+	
+	$(".compitem").change(function(){
+		var val=$(this).children("option:selected").val();
+		if(val!="-1"){
+		  var pos=$('textarea').position();
+		  if(pos>0&&expresion.length-1>pos&&expresion.length>0){
+			  if((expresion.charCodeAt(pos-1))!=32&&(expresion.charCodeAt(pos))!=32&&(expresion.charCodeAt(pos+1))!=32){
+				  return;
+				}
+			 }
+		  var tleng=val.length;
+		  var fs=expresion.substring(0,pos);
+		  var c=fs.charCodeAt(pos);
+		 
+		   expresion=fs+val+expresion.substring(pos,expresion.length);
+		   var fl=expresion.length;
+		   expresion=regReplace(expresion);
+		    ll=expresion.length;
+		  $('textarea').text(expresion);
+		  $('textarea').position(pos+tleng-(fl-ll));
+		   $('textarea').focus();
+		}
+		
+	});
+	
+});
+
+function check(){
+	   // var reg=/^(\(*\w+(.\w+)*\)*(\+|-|/|\*))+\w+(.\w+)*\)*$/;
+	  var reg= buildReg();
+	   var t=expresion.replace( /\s{1,}/g,"");
+ 	   var result=t.match(reg) ;
+	   if(result==null||result.length==0){
+		   alert("公式错误");
+	   }else{
+		     alert("公式正确");
+		   }
+	}
+  function buildReg(){
+	  var s="^(\(*\w+(.\w+)*\)*(\+|-|/|\*))+\w+(.\w+)*\)*$";
+	return new RegExp($(".re").val(),'gi');
+	}	
+
+$.fn.extend({
+    position:function( value ){
+        var elem = this[0];
+            if (elem&&(elem.tagName=="TEXTAREA"||elem.type.toLowerCase()=="text")) {
+               if($.browser.msie){
+                       var rng;
+                       if(elem.tagName == "TEXTAREA"){ 
+                            rng = event.srcElement.createTextRange();
+                            rng.moveToPoint(event.x,event.y);
+                       }else{ 
+                            rng = document.selection.createRange();
+                       }
+                       if( value === undefined ){
+                         rng.moveStart("character",-event.srcElement.value.length);
+                         return  rng.text.length;
+                       }else if(typeof value === "number" ){
+                         var index=this.position();
+                         index>value?( rng.moveEnd("character",value-index)):(rng.moveStart("character",value-index))
+                         rng.select();
+                       }
+                }else{
+                    if( value === undefined ){
+                         return elem.selectionStart;
+                       }else if(typeof value === "number" ){
+                         elem.selectionEnd = value;
+                         elem.selectionStart = value;
+                       }
+                }
+            }else{
+                if( value === undefined )
+                   return undefined;
+            }
+    }
+});
+</script>
+<style>
+
+#rootDiv{ position:absolute; left:200px; left:240px; width:420px; height:200px;}
+#roottab{ background:#333;}
+#roottab tr td{ background:#FFF;}
+textarea{ width:98%; height:100%; font-size:14px; color:#F00; font-weight:400;}
+</style>
+<body>
+
+<div id="rootDiv">
+
+<table id="roottab" width="420" border="0" cellspacing="1">
+  <tr>
+    <td height="30">
+    计算项:
+    <select class="compitem">
+      <option  value="-1">请选择</option>
+      <option  value=" 项目一 ">项目一</option>
+      <option  value=" 项目二 ">项目二</option>
+      <option  value=" 项目三 ">项目三</option>
+      <option  value=" 项目四 ">项目四</option>
+      <option  value=" 项目五 ">项目五</option>
+      <option  value=" 项目六 ">项目六</option>
+      <option  value=" 项目七 ">项目七</option>
+      <option  value=" 项目八 ">项目八</option>
+    </select>
+    操作符:
+     <select class="compitem">
+      <option value="-1" >请选择</option>
+      <option  value=" + ">+</option>
+      <option  value=" - ">-</option>
+      <option  value=" * ">*</option>
+      <option  value=" / ">/</option>
+      <option  value=" ( ) ">()</option>
+     </select>
+     
+     <input type="button" id="del"   value="←" />
+    </td>
+  </tr>
+  <tr>
+    <td height="160"> 
+     <textarea readonly="readonly" ></textarea>
+    </td>
+  </tr>
+  <tr>
+    <td height="24"> 
+    <input class="re" value="^(\(*[\u4E00-\u9FFF]+(.[\u4E00-\u9FFF]+)*\)*(\+|-|/|\*))+[\u4E00-\u9FFF]+(.[\u4E00-\u9FFF]+)*\)*$" />
+       <input type="button" onclick="check();" value="验证" />
+    </td>
+  </tr>
+</table>
+
+</div>
+</body>
+</html>

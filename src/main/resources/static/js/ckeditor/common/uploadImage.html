@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>管理系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<script>
+
+function isvalidatefile(obj){
+	var extend = obj.value.substring(obj.value.lastIndexOf(".")+1);
+	var accept_ext = new Array("BMP","JPEG","GIF","PSD","PNG","TIFF","TGA","EPS","JPG");
+	var flag = false;
+	if(extend != ''){
+	   for(var i=0; i<accept_ext.length; i++){
+			if(extend.toUpperCase() == accept_ext[i])
+			flag = true;
+				
+	   }
+	   
+	} 
+	if(flag == false){	
+		var tdId="td_"+obj.id;
+		var repTex="<div class='rim'><input type='file' name='file' id=";
+		repTex=repTex+obj.id+"  onchange='isvalidatefile(this)'/></div>";
+		alert("只能上传BMP,JPEG,GIF,PSD,PNG,TIFF,TGA,EPS,JPG 格式的图片");
+		document.getElementById(tdId).innerHTML=repTex;	
+		alert(repTex);	
+				
+	}
+     return true;
+}
+
+function Done() {
+  window.returnValue = document.getElementById("f_file").value; //上传后的图片链接
+  window.close();
+}
+
+function Resetim() {
+  window.close(); //上传后的图片链接
+ 
+}
+</script>
+
+</head>
+
+
+<body >
+ </br>
+      <table width="28%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td height="27" colspan="2" align="left" nowrap >&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="16%" align="right" nowrap >图片：</td>
+			
+		  <td width="84%" height="38" ><input type="file" name="file" value="" id="f_file" onchange="isvalidatefile(this)"/></td>
+		</tr>
+		<tr>
+		  <td  >&nbsp;</td>
+		  <td height="19"  ><span style="font-size:14px;">(可将远程图片链接路径粘贴进来)</span></td>
+	    </tr>
+		<tr>
+		  <td  >&nbsp;</td>
+          <td height="47"  >
+            <input name="submit" type="submit" onclick="Done()" value="提交"/>
+            <input   type="button" onclick="Resetim()"  style="margin-left:15px;" value="取消"/>         </td>
+        </tr>
+</table>   
+</body>
+</html>

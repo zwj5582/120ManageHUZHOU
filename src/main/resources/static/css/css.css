@@ -1,0 +1,10 @@
+body {
+	background-color: #b6d5f4;
+	font-family:'ËÎÌו,Arial, Helvetica'
+}
+
+#all{ margin:auto; padding:0px;}
+
+#loginbox{ color:#FFF; font-size:12px;}
+#loginbox td{ line-height:25px;}
+.inputtext{ border:1px solid #13599f; width:140px; color:#13599f; font-size:12px; height:16px;}

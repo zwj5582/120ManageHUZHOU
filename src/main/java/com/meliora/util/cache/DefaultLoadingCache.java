@@ -53,13 +53,10 @@ public class DefaultLoadingCache<K,V> {
                 .initialCapacity(100)
                 .maximumSize(maxmunsize)
                 .softValues()
-                .removalListener(new RemovalListener<K, V>() {
-                    @Override
-                    public void onRemoval(RemovalNotification<K, V> notification) {
-                        RemovalCause cause = notification.getCause();
-                        K key = notification.getKey();
-                        log.info("{0} is removed , cause : {1}",key,cause );
-                    }
+                .removalListener((RemovalListener<K, V>) notification -> {
+                    RemovalCause cause = notification.getCause();
+                    K key = notification.getKey();
+                    log.info("{0} is removed , cause : {1}",key,cause );
                 })
                 .build(cacheLoader);
         return this;
